@@ -17,13 +17,13 @@ package com.fuge.SingletonPattern;
 
 
 class Singleton {
-    private Singleton instance = null;
+    private static Singleton instance = null;
 
     //私有构造方法，防止被实例化
     private Singleton(){}
 
     //静态工程方法，创建实例
-    public Singleton getInstance() {
+    public static Singleton getInstance() {
         if (instance == null) {
             synchronized(Singleton.class) {
                 if (instance == null)
